@@ -3,11 +3,11 @@ class A:
         print("Class A")
 
 class B(A):
-    def method(self):
-        print("Class B")
+    pass
 
 class C(A):
-    pass
+    def method(self):
+        print("Class C")
 
 class D(B,C):
     pass
