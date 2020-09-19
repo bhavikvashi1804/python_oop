@@ -9,7 +9,7 @@ class Employee:
 class Trainee(Employee):
     def setName(self):
         print("Set name method in child class")
-        self.name="Tranee: Raj"
+        self.name="Trainee: Raj"
    
     def setToEmp(self):
         super().setName()
