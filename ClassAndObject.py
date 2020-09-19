@@ -1,19 +1,15 @@
-# Requirement: Create python program to check that employee has achieved target or not 
-# create class 
 class Employee:
-    name="Bhavik Vashi"
-    designation="Sales Executive"
-    salesMadeInThisWeek=11
-    def hasAchievedTarget(self):
-        if self.salesMadeInThisWeek>10:
-            print("Sales Target has been achieved")
-        else:
-            print("Sales Target has not been achieved")
+    noOfWorkingHours = 8
 
-# create object of class
-# Creation of object is also called as object instantiation
+
 employeeOne = Employee()
-# access the attribute of object
-print(employeeOne.name)
-# call method for perticular object
-employeeOne.hasAchievedTarget()
+print("Emp 1: No of working hours: " + str(employeeOne.noOfWorkingHours) )
+
+employeeTwo = Employee()
+print("Emp 2: No of working hours: " + str(employeeTwo.noOfWorkingHours) )
+
+#lets change the value of class attribute
+Employee.noOfWorkingHours=10
+print("After changing the value of class attribute, lets check the value of class attribute in both object")
+print("Emp 1: No of working hours: " + str(employeeOne.noOfWorkingHours) )
+print("Emp 2: No of working hours: " + str(employeeTwo.noOfWorkingHours) )
