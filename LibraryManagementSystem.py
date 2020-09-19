@@ -41,3 +41,22 @@ class Student:
 
 library = Library(['OS', 'DBMS', 'JS', 'Web Tech'])
 student = Student()
+
+while True:
+    print()
+    print("Enter 1: Diplay Available Books")
+    print("Enter 2: Borrow a Book")
+    print("Enter 3: Return a Book")
+    print("Enter 4: Exit")
+
+    userChoice=int(input())
+    if userChoice is 1:
+        library.displayAvailableBook()
+    elif userChoice is 2:
+        requestedBook=student.requestBook()
+        library.lendBook(requestedBook)
+    elif userChoice is 3:
+        returnedBook=student.returnBook()
+        library.addBook(returnedBook)
+    elif userChoice is 4:
+        quit()
