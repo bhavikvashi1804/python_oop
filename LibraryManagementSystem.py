@@ -6,20 +6,38 @@
 
 
 class Library:
+    
+    def __init__(self,listOfBooks):
+        self.availableBooks=listOfBooks
+
     def displayAvailableBook(self):
-        pass
+        print()
+        print("Available Books: -")
+        for book in self.availableBooks:
+            print(book)
 
-    def lendBook(self):
-        pass
+    def lendBook(self,requestedBook):
+        if requestedBook in self.availableBooks:
+            print("You have now borrowed the book") 
+            self.availableBooks.remove(requestedBook)
+        else:
+            print("Sorry book is not available :(")
 
-    def addBook(self):
-        pass
+    def addBook(self,returnedBook):
+        self.availableBooks.append(returnedBook)
+        print("You have returned a book, Thank you :)")
 
 
 class Student:
     def requestBook(self):
-        pass
+        print("Enter the name of the book you want to like borrow:")
+        self.book=input()
+        return self.book
 
     def returnBook(self):
-        pass
+        print("Enter the name of the book which you are returning:")
+        self.book=input()
+        return self.book
 
+library = Library(['OS', 'DBMS', 'JS', 'Web Tech'])
+student = Student()
