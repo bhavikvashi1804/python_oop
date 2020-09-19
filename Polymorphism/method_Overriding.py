@@ -11,15 +11,17 @@ class Trainee(Employee):
         print("Set name method in child class")
         self.name="Tranee: Raj"
    
-        
+    def setToEmp(self):
+        super().setName()
+        # super method is used to call the method of parent which has same in parent and child 
 
-employee1 = Employee()
-employee1.setName()
-print("Name of Emp:", end='')
-employee1.displayName()
 
 
 trainee1 = Trainee()
 trainee1.setName()
-print("Name of Trainee:", end='')
+print("Name:", end='')
+trainee1.displayName()
+print("After 6 months")
+trainee1.setToEmp()
+print("Name:", end='')
 trainee1.displayName()
