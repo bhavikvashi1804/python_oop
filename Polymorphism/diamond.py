@@ -11,4 +11,5 @@ class C(A):
 class D(B,C):
     pass
 
-
+d1 = D()
+d1.method()
