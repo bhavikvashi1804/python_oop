@@ -1,11 +1,13 @@
 class Employee:
-    def employeeDetails():
-        pass
+    def employeeDetails(self):
+        self.name="Bhavik Vashi"
+        # if you use self.variable then available for object
+        # if you directly use variale then its scope is only inside method
+        print("In Emp Details " + str(self.name))
 
 employeeOne=Employee()
 employeeOne.employeeDetails()
-# here it gives error because
-# TypeError: employeeDetails() takes 0 positional arguments but 1 was given
-# internally it calls Employee.employeeDetails(employeeOne)
+print("After exection of employeeDetails method")
+print("Emp name: " + str(employeeOne.name))
 
 
