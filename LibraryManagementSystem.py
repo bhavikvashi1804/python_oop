@@ -3,3 +3,23 @@
 
 # Class Students
 # Layers of abstraction => request book, return book
+
+
+class Library:
+    def displayAvailableBook(self):
+        pass
+
+    def lendBook(self):
+        pass
+
+    def addBook(self):
+        pass
+
+
+class Student:
+    def requestBook(self):
+        pass
+
+    def returnBook(self):
+        pass
+
