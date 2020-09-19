@@ -3,7 +3,8 @@ class A:
         print("Class A")
 
 class B(A):
-    pass
+    def method(self):
+        print("Class B")
 
 class C(A):
     def method(self):
